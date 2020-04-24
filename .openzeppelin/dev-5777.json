@@ -1,0 +1,14 @@
+{
+  "contracts": {},
+  "solidityLibs": {},
+  "proxies": {
+    "David19/CovidCredentialRegistry": [
+      {
+        "address": "0xB26ca138a8bc75c4272FD4E2EAA5fb7D2265e260",
+        "kind": "NonProxy",
+        "bytecodeHash": "5a9368bff17666a22090fffef821d832c7e058d2f20b4d550cd29e4df12714fd"
+      }
+    ]
+  },
+  "manifestVersion": "2.2"
+}

@@ -1,21 +1,13 @@
 const HDWalletProvider = require("@truffle/hdwallet-provider");
-const privateKey = "<PRIVATE-KEY>";
-const privateKeyProvider = new HDWalletProvider(privateKey, "<NODE>");
+const privateKey = "ccc9e9dcbf0575a02d20ba4fbe317acd86795d1bd2521f34cb709d1e762d12b2";
+const privateKeyProvider = new HDWalletProvider(privateKey, "HTTP://127.0.0.1:8545");
 
 module.exports = {
-  networks: {
-    development: {
-      protocol: 'http',
-      host: 'localhost',
-      port: 8545,
-      gas: 8000000,
-      gasPrice: 0,
-      networkId: '*',
-    },
-    lacchain: {
-      provider: privateKeyProvider,
-      network_id: "648529",
-      gasPrice: 0
+    networks: {
+        lacchain: {
+            provider: privateKeyProvider,
+            network_id: "5777",
+            gasPrice: 0
+        }
     }
-  },
 };
