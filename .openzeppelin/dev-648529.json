@@ -1,276 +1,270 @@
 {
-  "contracts": {
-    "CovidCredentialRegistry": {
-      "address": "0x48002C8B1FF5C282e3E03cD07f2d874e7E003440",
-      "constructorCode": "6080604052611a14806100136000396000f3fe",
-      "bodyBytecodeHash": "14ab08c880005b3e77dc0cd28609e557a41876a6a43f9a254ba9ba0f9cac46c1",
-      "localBytecodeHash": "5a9368bff17666a22090fffef821d832c7e058d2f20b4d550cd29e4df12714fd",
-      "deployedBytecodeHash": "5a9368bff17666a22090fffef821d832c7e058d2f20b4d550cd29e4df12714fd",
-      "types": {
-        "t_bool": {
-          "id": "t_bool",
-          "kind": "elementary",
-          "label": "bool"
-        },
-        "t_uint256": {
-          "id": "t_uint256",
-          "kind": "elementary",
-          "label": "uint256"
-        },
-        "t_array:50<t_uint256>": {
-          "id": "t_array:50<t_uint256>",
-          "valueType": "t_uint256",
-          "length": "50",
-          "kind": "array",
-          "label": "uint256[50]"
-        },
-        "t_struct<Roles.Role>": {
-          "id": "t_struct<Roles.Role>",
-          "kind": "struct",
-          "label": "Roles.Role",
-          "members": [
-            {
-              "label": "bearer",
-              "astId": 35,
-              "type": "t_mapping<t_bool>",
-              "src": "150:32:1"
+    "contracts": {
+        "CovidCredentialRegistry": {
+            "address": "0x48002C8B1FF5C282e3E03cD07f2d874e7E003440",
+            "constructorCode": "6080604052611a14806100136000396000f3fe",
+            "bodyBytecodeHash": "14ab08c880005b3e77dc0cd28609e557a41876a6a43f9a254ba9ba0f9cac46c1",
+            "localBytecodeHash": "5a9368bff17666a22090fffef821d832c7e058d2f20b4d550cd29e4df12714fd",
+            "deployedBytecodeHash": "5a9368bff17666a22090fffef821d832c7e058d2f20b4d550cd29e4df12714fd",
+            "types": {
+                "t_bool": {
+                    "id": "t_bool",
+                    "kind": "elementary",
+                    "label": "bool"
+                },
+                "t_uint256": {
+                    "id": "t_uint256",
+                    "kind": "elementary",
+                    "label": "uint256"
+                },
+                "t_array:50<t_uint256>": {
+                    "id": "t_array:50<t_uint256>",
+                    "valueType": "t_uint256",
+                    "length": "50",
+                    "kind": "array",
+                    "label": "uint256[50]"
+                },
+                "t_struct<Roles.Role>": {
+                    "id": "t_struct<Roles.Role>",
+                    "kind": "struct",
+                    "label": "Roles.Role",
+                    "members": [{
+                        "label": "bearer",
+                        "astId": 35,
+                        "type": "t_mapping<t_bool>",
+                        "src": "150:32:1"
+                    }]
+                },
+                "t_mapping<t_bool>": {
+                    "id": "t_mapping<t_bool>",
+                    "valueType": "t_bool",
+                    "label": "mapping(key => bool)",
+                    "kind": "mapping"
+                },
+                "t_struct<ICredentialRegistry.CovidMetadata>": {
+                    "id": "t_struct<ICredentialRegistry.CovidMetadata>",
+                    "kind": "struct",
+                    "label": "ICredentialRegistry.CovidMetadata",
+                    "members": [{
+                            "label": "subjectId",
+                            "astId": 701,
+                            "type": "t_bytes32",
+                            "src": "535:17:6"
+                        },
+                        {
+                            "label": "startDate",
+                            "astId": 703,
+                            "type": "t_uint256",
+                            "src": "562:14:6"
+                        },
+                        {
+                            "label": "iat",
+                            "astId": 705,
+                            "type": "t_uint256",
+                            "src": "586:8:6"
+                        },
+                        {
+                            "label": "exp",
+                            "astId": 707,
+                            "type": "t_uint256",
+                            "src": "604:8:6"
+                        },
+                        {
+                            "label": "sex",
+                            "astId": 709,
+                            "type": "t_enum<ICredentialRegistry.Sex>",
+                            "src": "622:7:6"
+                        },
+                        {
+                            "label": "age",
+                            "astId": 711,
+                            "type": "t_uint8",
+                            "src": "639:9:6"
+                        },
+                        {
+                            "label": "geoHash",
+                            "astId": 713,
+                            "type": "t_bytes6",
+                            "src": "658:14:6"
+                        },
+                        {
+                            "label": "credentialType",
+                            "astId": 715,
+                            "type": "t_enum<ICredentialRegistry.CovidCode>",
+                            "src": "682:24:6"
+                        },
+                        {
+                            "label": "reason",
+                            "astId": 717,
+                            "type": "t_enum<ICredentialRegistry.InterruptionReason>",
+                            "src": "716:25:6"
+                        },
+                        {
+                            "label": "symptoms",
+                            "astId": 719,
+                            "type": "t_bytes1",
+                            "src": "751:13:6"
+                        },
+                        {
+                            "label": "status",
+                            "astId": 721,
+                            "type": "t_bool",
+                            "src": "774:11:6"
+                        }
+                    ]
+                },
+                "t_bytes32": {
+                    "id": "t_bytes32",
+                    "kind": "elementary",
+                    "label": "bytes32"
+                },
+                "t_enum<ICredentialRegistry.Sex>": {
+                    "id": "t_enum<ICredentialRegistry.Sex>",
+                    "kind": "enum",
+                    "label": "ICredentialRegistry.Sex",
+                    "members": [
+                        "Male",
+                        "Female",
+                        "Unspecified",
+                        "Other"
+                    ]
+                },
+                "t_uint8": {
+                    "id": "t_uint8",
+                    "kind": "elementary",
+                    "label": "uint8"
+                },
+                "t_bytes6": {
+                    "id": "t_bytes6",
+                    "kind": "elementary",
+                    "label": "bytes6"
+                },
+                "t_enum<ICredentialRegistry.CovidCode>": {
+                    "id": "t_enum<ICredentialRegistry.CovidCode>",
+                    "kind": "enum",
+                    "label": "ICredentialRegistry.CovidCode",
+                    "members": [
+                        "Confinement",
+                        "Interruption",
+                        "Symptoms",
+                        "Infection",
+                        "Recovery"
+                    ]
+                },
+                "t_enum<ICredentialRegistry.InterruptionReason>": {
+                    "id": "t_enum<ICredentialRegistry.InterruptionReason>",
+                    "kind": "enum",
+                    "label": "ICredentialRegistry.InterruptionReason",
+                    "members": [
+                        "None",
+                        "Purchase",
+                        "AttendanceHealthCenter",
+                        "CommutingWork",
+                        "ReturnResidence",
+                        "AssistPeople",
+                        "CommutingFinancial",
+                        "ForceMajeure"
+                    ]
+                },
+                "t_bytes1": {
+                    "id": "t_bytes1",
+                    "kind": "elementary",
+                    "label": "bytes1"
+                },
+                "t_mapping<t_struct<ICredentialRegistry.CovidMetadata>>": {
+                    "id": "t_mapping<t_struct<ICredentialRegistry.CovidMetadata>>",
+                    "valueType": "t_struct<ICredentialRegistry.CovidMetadata>",
+                    "label": "mapping(key => ICredentialRegistry.CovidMetadata)",
+                    "kind": "mapping"
+                }
+            },
+            "storage": [{
+                    "contract": "Initializable",
+                    "path": "@openzeppelin/upgrades/contracts/Initializable.sol",
+                    "label": "initialized",
+                    "astId": 371,
+                    "type": "t_bool",
+                    "src": "757:24:4"
+                },
+                {
+                    "contract": "Initializable",
+                    "path": "@openzeppelin/upgrades/contracts/Initializable.sol",
+                    "label": "initializing",
+                    "astId": 373,
+                    "type": "t_bool",
+                    "src": "876:25:4"
+                },
+                {
+                    "contract": "Initializable",
+                    "path": "@openzeppelin/upgrades/contracts/Initializable.sol",
+                    "label": "______gap",
+                    "astId": 435,
+                    "type": "t_array:50<t_uint256>",
+                    "src": "1982:29:4"
+                },
+                {
+                    "contract": "WhitelistAdminRole",
+                    "path": "@openzeppelin/contracts-ethereum-package/contracts/access/roles/WhitelistAdminRole.sol",
+                    "label": "_whitelistAdmins",
+                    "astId": 132,
+                    "type": "t_struct<Roles.Role>",
+                    "src": "477:35:2"
+                },
+                {
+                    "contract": "WhitelistAdminRole",
+                    "path": "@openzeppelin/contracts-ethereum-package/contracts/access/roles/WhitelistAdminRole.sol",
+                    "label": "______gap",
+                    "astId": 232,
+                    "type": "t_array:50<t_uint256>",
+                    "src": "1503:29:2"
+                },
+                {
+                    "contract": "WhitelistedRole",
+                    "path": "@openzeppelin/contracts-ethereum-package/contracts/access/roles/WhitelistedRole.sol",
+                    "label": "_whitelisteds",
+                    "astId": 258,
+                    "type": "t_struct<Roles.Role>",
+                    "src": "709:32:3"
+                },
+                {
+                    "contract": "WhitelistedRole",
+                    "path": "@openzeppelin/contracts-ethereum-package/contracts/access/roles/WhitelistedRole.sol",
+                    "label": "______gap",
+                    "astId": 366,
+                    "type": "t_array:50<t_uint256>",
+                    "src": "1760:29:3"
+                },
+                {
+                    "contract": "CovidCredentialRegistry",
+                    "path": "contracts/CovidCredentialRegistry.sol",
+                    "label": "credentials",
+                    "astId": 450,
+                    "type": "t_mapping<t_struct<ICredentialRegistry.CovidMetadata>>",
+                    "src": "234:67:5"
+                }
+            ],
+            "warnings": {
+                "hasConstructor": false,
+                "hasSelfDestruct": false,
+                "hasDelegateCall": false,
+                "hasInitialValuesInDeclarations": false,
+                "uninitializedBaseContracts": []
             }
-          ]
-        },
-        "t_mapping<t_bool>": {
-          "id": "t_mapping<t_bool>",
-          "valueType": "t_bool",
-          "label": "mapping(key => bool)",
-          "kind": "mapping"
-        },
-        "t_struct<ICredentialRegistry.CovidMetadata>": {
-          "id": "t_struct<ICredentialRegistry.CovidMetadata>",
-          "kind": "struct",
-          "label": "ICredentialRegistry.CovidMetadata",
-          "members": [
-            {
-              "label": "subjectId",
-              "astId": 701,
-              "type": "t_bytes32",
-              "src": "535:17:6"
-            },
-            {
-              "label": "startDate",
-              "astId": 703,
-              "type": "t_uint256",
-              "src": "562:14:6"
-            },
-            {
-              "label": "iat",
-              "astId": 705,
-              "type": "t_uint256",
-              "src": "586:8:6"
-            },
-            {
-              "label": "exp",
-              "astId": 707,
-              "type": "t_uint256",
-              "src": "604:8:6"
-            },
-            {
-              "label": "sex",
-              "astId": 709,
-              "type": "t_enum<ICredentialRegistry.Sex>",
-              "src": "622:7:6"
-            },
-            {
-              "label": "age",
-              "astId": 711,
-              "type": "t_uint8",
-              "src": "639:9:6"
-            },
-            {
-              "label": "geoHash",
-              "astId": 713,
-              "type": "t_bytes6",
-              "src": "658:14:6"
-            },
-            {
-              "label": "credentialType",
-              "astId": 715,
-              "type": "t_enum<ICredentialRegistry.CovidCode>",
-              "src": "682:24:6"
-            },
-            {
-              "label": "reason",
-              "astId": 717,
-              "type": "t_enum<ICredentialRegistry.InterruptionReason>",
-              "src": "716:25:6"
-            },
-            {
-              "label": "symptoms",
-              "astId": 719,
-              "type": "t_bytes1",
-              "src": "751:13:6"
-            },
-            {
-              "label": "status",
-              "astId": 721,
-              "type": "t_bool",
-              "src": "774:11:6"
-            }
-          ]
-        },
-        "t_bytes32": {
-          "id": "t_bytes32",
-          "kind": "elementary",
-          "label": "bytes32"
-        },
-        "t_enum<ICredentialRegistry.Sex>": {
-          "id": "t_enum<ICredentialRegistry.Sex>",
-          "kind": "enum",
-          "label": "ICredentialRegistry.Sex",
-          "members": [
-            "Male",
-            "Female",
-            "Unspecified",
-            "Other"
-          ]
-        },
-        "t_uint8": {
-          "id": "t_uint8",
-          "kind": "elementary",
-          "label": "uint8"
-        },
-        "t_bytes6": {
-          "id": "t_bytes6",
-          "kind": "elementary",
-          "label": "bytes6"
-        },
-        "t_enum<ICredentialRegistry.CovidCode>": {
-          "id": "t_enum<ICredentialRegistry.CovidCode>",
-          "kind": "enum",
-          "label": "ICredentialRegistry.CovidCode",
-          "members": [
-            "Confinement",
-            "Interruption",
-            "Symptoms",
-            "Infection",
-            "Recovery"
-          ]
-        },
-        "t_enum<ICredentialRegistry.InterruptionReason>": {
-          "id": "t_enum<ICredentialRegistry.InterruptionReason>",
-          "kind": "enum",
-          "label": "ICredentialRegistry.InterruptionReason",
-          "members": [
-            "None",
-            "Purchase",
-            "AttendanceHealthCenter",
-            "CommutingWork",
-            "ReturnResidence",
-            "AssistPeople",
-            "CommutingFinancial",
-            "ForceMajeure"
-          ]
-        },
-        "t_bytes1": {
-          "id": "t_bytes1",
-          "kind": "elementary",
-          "label": "bytes1"
-        },
-        "t_mapping<t_struct<ICredentialRegistry.CovidMetadata>>": {
-          "id": "t_mapping<t_struct<ICredentialRegistry.CovidMetadata>>",
-          "valueType": "t_struct<ICredentialRegistry.CovidMetadata>",
-          "label": "mapping(key => ICredentialRegistry.CovidMetadata)",
-          "kind": "mapping"
         }
-      },
-      "storage": [
-        {
-          "contract": "Initializable",
-          "path": "@openzeppelin/upgrades/contracts/Initializable.sol",
-          "label": "initialized",
-          "astId": 371,
-          "type": "t_bool",
-          "src": "757:24:4"
-        },
-        {
-          "contract": "Initializable",
-          "path": "@openzeppelin/upgrades/contracts/Initializable.sol",
-          "label": "initializing",
-          "astId": 373,
-          "type": "t_bool",
-          "src": "876:25:4"
-        },
-        {
-          "contract": "Initializable",
-          "path": "@openzeppelin/upgrades/contracts/Initializable.sol",
-          "label": "______gap",
-          "astId": 435,
-          "type": "t_array:50<t_uint256>",
-          "src": "1982:29:4"
-        },
-        {
-          "contract": "WhitelistAdminRole",
-          "path": "@openzeppelin/contracts-ethereum-package/contracts/access/roles/WhitelistAdminRole.sol",
-          "label": "_whitelistAdmins",
-          "astId": 132,
-          "type": "t_struct<Roles.Role>",
-          "src": "477:35:2"
-        },
-        {
-          "contract": "WhitelistAdminRole",
-          "path": "@openzeppelin/contracts-ethereum-package/contracts/access/roles/WhitelistAdminRole.sol",
-          "label": "______gap",
-          "astId": 232,
-          "type": "t_array:50<t_uint256>",
-          "src": "1503:29:2"
-        },
-        {
-          "contract": "WhitelistedRole",
-          "path": "@openzeppelin/contracts-ethereum-package/contracts/access/roles/WhitelistedRole.sol",
-          "label": "_whitelisteds",
-          "astId": 258,
-          "type": "t_struct<Roles.Role>",
-          "src": "709:32:3"
-        },
-        {
-          "contract": "WhitelistedRole",
-          "path": "@openzeppelin/contracts-ethereum-package/contracts/access/roles/WhitelistedRole.sol",
-          "label": "______gap",
-          "astId": 366,
-          "type": "t_array:50<t_uint256>",
-          "src": "1760:29:3"
-        },
-        {
-          "contract": "CovidCredentialRegistry",
-          "path": "contracts/CovidCredentialRegistry.sol",
-          "label": "credentials",
-          "astId": 450,
-          "type": "t_mapping<t_struct<ICredentialRegistry.CovidMetadata>>",
-          "src": "234:67:5"
-        }
-      ],
-      "warnings": {
-        "hasConstructor": false,
-        "hasSelfDestruct": false,
-        "hasDelegateCall": false,
-        "hasInitialValuesInDeclarations": false,
-        "uninitializedBaseContracts": []
-      }
+    },
+    "solidityLibs": {},
+    "proxies": {
+        "David19/CovidCredentialRegistry": [{
+            "address": "0x13Bf54153c34555205D009e492FD725D42287e99",
+            "version": "1.0.0",
+            "implementation": "0x6FF4E2341FFdCC2Cd16589A6ab9ACC509DD66E24",
+            "admin": "0x8cea4103f2b8cDFE1982121E90534670F1Fc70D4",
+            "kind": "Upgradeable"
+        }]
+    },
+    "manifestVersion": "2.2",
+    "version": "1.0.0",
+    "proxyAdmin": {
+        "address": "0x8cea4103f2b8cDFE1982121E90534670F1Fc70D4"
     }
-  },
-  "solidityLibs": {},
-  "proxies": {
-    "David19/CovidCredentialRegistry": [
-      {
-        "address": "0x1Fb0C4110D340E246593a88Ac6C0Ecb144B3D476",
-        "version": "1.0.0",
-        "implementation": "0x48002C8B1FF5C282e3E03cD07f2d874e7E003440",
-        "admin": "0x5D068570c4f1B8df655513c237d774CA34D2C77b",
-        "kind": "Upgradeable"
-      }
-    ]
-  },
-  "manifestVersion": "2.2",
-  "version": "1.0.0",
-  "proxyAdmin": {
-    "address": "0x5D068570c4f1B8df655513c237d774CA34D2C77b"
-  }
 }
